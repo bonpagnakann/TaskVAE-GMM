@@ -1,0 +1,12 @@
+numpy==2.3.1
+pandas==2.3.0
+scikit-learn==1.7.0
+torch==2.7.1
+tqdm==4.67.1
+matplotlib==3.10.3
+seaborn==0.13.2
+plotly==6.1.2
+pillow==11.2.1
+pydpp==0.2.1
+scipy==1.16.0
+hickle==5.0.3

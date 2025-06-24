@@ -1,0 +1,13 @@
+# Ignore files and directories
+node_modules/
+datasets/
+output_reports/
+saved*/
+taskvae_cl/
+*.log
+*.stderr
+*.stdout
+*.tmp
+experiment*.sh
+.DS_Store
+__pycache__/
