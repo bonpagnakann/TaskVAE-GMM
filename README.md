@@ -9,7 +9,7 @@ The implementation of the PhD thesis: TaskVAE-GMM: Memory-Efficient Generative R
   * [2.1 Important Parameters](#21-Important-Parameters)
   * [2.2 Replay-Based Methods](#22-Replay-Based-Methods)
   * [2.3 TaskVAE](#23-TaskVAE)
-  * [2.4 TaskVAE](#23-TaskVAE-GMM)
+  * [2.4 TaskVAE-GMM](#24-TaskVAE-GMM)
 * [3. Detailed Results](#3-Detailed-Results)
 * [4. Acknowledgement](#4-Acknowledgement)
 
