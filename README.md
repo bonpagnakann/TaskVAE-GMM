@@ -10,8 +10,8 @@ The implementation of the PhD thesis: TaskVAE-GMM: Memory-Efficient Generative R
   * [2.2 Replay-Based Methods](#22-Replay-Based-Methods)
   * [2.3 TaskVAE](#23-TaskVAE)
   * [2.4 TaskVAE-GMM](#24-TaskVAE-GMM)
+  * [2.5 Different Ratios of Generated Sample Size](#25-Different-Size-Ratio-of-Synthetic-Data-from-TaskVAE)
 * [3. Detailed Results](#3-Detailed-Results)
-* [4. Acknowledgement](#4-Acknowledgement)
 
 ## 1. Installation
 
@@ -71,18 +71,26 @@ Below is the sample commands to run TaskVAE experiments for both with and withou
 
 - TaskVAE (without filtering):
   ```
-  python runner.py --dataset 'motion' --total_classes 6 --new_classes '31' --base_classes 2 --epochs 20 --method 'ce' --exemplar 'vae' --vae_lat_sampling 'boundary_box' --person 0
+  python runner.py --dataset 'motion' --total_classes 6 --new_classes '31' --base_classes 2 --epochs 20 --method 'ce' --exemplar 'taskvae' --vae_lat_sampling 'boundary_box' --person 0
   ```
 - TaskVAE (with filtering):
   ```
-  python runner.py --dataset 'motion' --total_classes 6 --new_classes '31' --base_classes 2 --epochs 20 --method 'ce' --exemplar 'vae' --vae_lat_sampling 'boundary_box' --latent_vec_filter 'probability' --person 0
+  python runner.py --dataset 'motion' --total_classes 6 --new_classes '31' --base_classes 2 --epochs 20 --method 'ce' --exemplar 'taskvae' --vae_lat_sampling 'boundary_box' --latent_vec_filter 'probability' --person 0
   ```
 ### 2.4 TaskVAE-GMM
 For TaskVAE-GMM, run the following:
 
 - TaskVAE-GMM:
   ```
-  python runner.py --dataset 'motion' --total_classes 6 --new_classes '31' --base_classes 2 --epochs 20 --method 'ce' --exemplar 'vae' --vae_lat_sampling 'gmm' --person 0
+  python runner.py --dataset 'motion' --total_classes 6 --new_classes '31' --base_classes 2 --epochs 20 --method 'ce' --exemplar 'taskvae' --vae_lat_sampling 'gmm' --person 0
+  ```
+
+### 2.5 Different Size Ratio of Synthetic Data from TaskVAE
+For the study of the impact of sample size of generated data from TaskVAE, run the following:
+
+  ```
+  python runner.py --dataset 'motion' --total_classes 6 --new_classes '31' --base_classes 2 --epochs 20 --method 'ce' --exemplar 'taskvae_ratio' --person 0
+  ```
 
 The output files are stored in 'output_reports/' folder which will automatically appears when a experiment command is launched. The output files contains necessary information including the data size, exemplar size, and the detailed results (Accuracy of all, old, and new classes) in each task. 
  
