@@ -11,3 +11,4 @@ taskvae_cl/
 experiment*.sh
 .DS_Store
 __pycache__/
+.idea/*
